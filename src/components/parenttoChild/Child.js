@@ -2,7 +2,11 @@ import React from 'react';
 
 const Child = (props) => {
     return (
-    <button onClick={props.dowhatever}>{props.title}</button>
+    <div>
+        <h1>grandparent to child props example</h1>
+        <button onClick={props.dowhatever}>{props.title}</button>
+    </div>
+    
     )
   }
   
