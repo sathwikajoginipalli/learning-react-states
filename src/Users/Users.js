@@ -12,8 +12,8 @@ class Users extends Component{
     }
     makeMeYounger = () => {
         const newState = this.state.users.map((user)=>{
-          const tempUser = user;
-          tempUser.age -=10;
+          let tempUser = user;
+          tempUser = tempUser.age-10> 0?tempUser.age -=10:alert("age cannot be less than 0");
           return tempUser;
         });
         this.setState({
