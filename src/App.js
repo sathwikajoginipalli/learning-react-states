@@ -1,10 +1,12 @@
 import Users from './Users/Users'; 
 import React, { Component } from 'react';
 import './App.css';
+import Parent from './components/parenttoChild/Parent';
 
 class App extends Component {
   state = {
-    name: 'techsith'
+    name: 'techsith',
+    title: 'hello'
   } 
 
   changeName = (newName) => {
@@ -18,12 +20,22 @@ class App extends Component {
       name: event.target.value
     })
   }
+  changetheworld=(newtitle)=>{
+    this.setState({
+      title:newtitle
+    })
+    
+
+  }
 
   render() {
     return (
       <div className="App">
       <br/>
       <Users></Users>
+      <Parent changetheworldevent = {this.changetheworld.bind(this,'iwillchange')} 
+      bethesameevent = {this.changetheworld.bind(this,'staythesame')} 
+      title={this.state.title}/>
       {/* two way binding */}
       <input type="text" onChange={this.changeNameFromInput} value={this.state.name}/>
       <br/>
