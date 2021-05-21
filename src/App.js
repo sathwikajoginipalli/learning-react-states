@@ -1,7 +1,17 @@
 import Users from './Users/Users'; 
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import './App.css';
 import Parent from './components/parenttoChild/Parent';
+
+const Hi=()=>{
+  return(
+  <>
+  <h1>Fragments example</h1>
+  <div>HI</div>
+  <div>Hello</div>
+  </>
+  )
+}
 
 class App extends Component {
   state = {
@@ -32,6 +42,7 @@ class App extends Component {
     return (
       <div className="App">
       <br/>
+      <Hi/>
       <Users></Users>
       <Parent changetheworldevent = {this.changetheworld.bind(this,'iwillchange')} 
       bethesameevent = {this.changetheworld.bind(this,'staythesame')} 

@@ -6,7 +6,8 @@ class Users extends Component{
         users:[
             {name: "John",age:89},
             {name: "Jill", age:78},
-            {name:"Peter",age:80}
+            {name:"Peter",age:80},
+            {name: "Amar",age:56}
         ],
         title: "Hello Users"
     }
