@@ -48,7 +48,7 @@ class App extends Component {
       bethesameevent = {this.changetheworld.bind(this,'staythesame')} 
       title={this.state.title}/>
       {/* two way binding */}
-      <h1>two binding example</h1>
+      <h1>two-way binding example</h1>
       <input type="text" onChange={this.changeNameFromInput} value={this.state.name}/>
       <br/>
       <button onClick={() => this.changeName('Awesome Techsith :(')}>Change Using Anon Function</button>
